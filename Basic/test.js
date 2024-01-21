@@ -61,4 +61,52 @@ const o3 = {...o1,...o2}
 // const so that the value cannot be changed
 // {the property to fetch:alias} = object where the property exists
 const {Age:a} = obj
-console.log(a);
+// console.log(a);
+//  function add(a , b) {
+//     return a + b;
+//  }
+// to avoid the below case one should mention authentication
+//  console.log(add(2 , 5))
+// if we call the function without arguments then unddefined will be returned
+// to avoid this
+function add(a = 0 , b = 0) {
+    return a + b;
+ }
+//  console.log(add())
+
+//  when we don't know how many values we have to pass then we can use rest operator
+
+function infiniteArguments(...arguments){
+    return arguments;
+}
+
+// console.log(infiniteArguments(1,2,3,4,5,6,'yugd',true))
+
+
+// variables can hold functions
+// const area = function(length , breadth){
+    // console.log(`Area is ${length * breadth}`)
+// }
+
+// console.log(area(6,4))
+
+// this keyword only works with objects
+// arrow function
+const circle = (radius) => {
+    return (Math.PI * radius ** 2)
+}
+
+// console.log(circle(7));
+
+// basic syntax is () =>{}
+// can hold this arrow function in a variable eg. const example = ()=>{}
+
+// const print = (num) => num;
+// console.log(print(8));
+
+// IMMEDIATELY INVOKED FUNCTION EXPRESSIONS (IIFE)
+
+// (function print(){console.log(`hello`)})();
+
+// make it an arrow function
+// ((name) => console.log(name))('tushar');
