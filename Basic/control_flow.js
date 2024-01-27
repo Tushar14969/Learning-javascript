@@ -123,4 +123,35 @@ let mapArray = a.map( (i) => {
     return i * 10
 } )
 
-console.log(mapArray);
+// console.log(mapArray);
+
+// reduce method
+
+let mobilePhones = [
+    {
+        Name:'Samsung',
+        Price:15000
+    },
+    {
+        Name:'Apple',
+        Price:150000
+    },
+    {
+        Name:'Vivo',
+        Price:10000
+    },
+    {
+        Name:'Realme',
+        Price:8000
+    },
+    {
+        Name:'Redme',
+        Price:7000
+    },
+]
+
+let deliveryCharge = 1000
+let priceToPay = mobilePhones
+        .filter( (Phones) => Phones.Price >= 10000 )
+        .reduce( (accumulator, expensivePhones) => accumulator + expensivePhones.Price, deliveryCharge )
+console.log(priceToPay);
