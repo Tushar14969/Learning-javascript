@@ -13,8 +13,35 @@
 </head>
 <body class="bg-black">
     <div>
-        <h1 id="title">No job that is why switching to web dev</h1>
+        <h1 id="title" class="heading">No job that is why switching to web dev <p style="display: none;">hidden text</p></h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, asperiores.</p>
     </div>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+        <div class="day">saturday</div>
+        <div class="day">sunday</div>
+    </div>
 </body>
+<script>
+    // const parent = document.querySelector('.parent')
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // parent.children[2].style.backgroundColor = 'grey';
+    
+    // const div = document.createElement('div')
+    // console.log(div);
+    // div.className = 'divv'
+
+    function addItem(itemName){
+        const li = document.createElement('li')
+        li.innerHTML = `${itemName}`
+        document.querySelector('.day').appendChild(li)
+    }
+    addItem('hello')
+</script>
 </html>
